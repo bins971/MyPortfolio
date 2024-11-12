@@ -332,12 +332,15 @@ form .btn2{
     #header{
         background-image: url();
     }
+    .background{
+        width: 50;
+    }
     .header-text{
-        margin-top: 100%;
-        font-size: 16px;
+        margin-top: 30%;
+        font-size: 20px;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 50px;
     }
     nav .fas{
         display: block;
@@ -356,7 +359,7 @@ form .btn2{
     }
     nav ul li{
         display: block;
-        margin: 25px;
+        margin: 30px;
     }
     nav ul .fas{
         position: absolute;
