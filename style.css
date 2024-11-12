@@ -345,6 +345,11 @@ form .btn2{
     nav .fas{
         display: block;
         font-size: 25px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 3;
     }
     nav ul{
         background: #ff004f;
@@ -357,14 +362,17 @@ form .btn2{
         z-index: 2; 
         transition: right 0.5s;
     }
+    nav .show-menu{
+        right: 0;
+    }
     nav ul li{
         display: block;
         margin: 30px;
     }
     nav ul .fas{
         position: absolute;
-        top: 25px;
-        left: 25px;
+        top: 15px;
+        left: 15px;
         cursor: pointer;
     }
     .sub-title{
