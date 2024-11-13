@@ -77,14 +77,12 @@
                 <div>
                     <i class="fa-solid fa-code"></i> 
                     <h2>Web Dev</h2>
-                    <p>      </p>
-                    <a href="#">Learn more</a>
+                    <a href="https://bins971.github.io/MyPortfolio/">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-uikit"></i>
                     <h2>Database</h2>
-                    <p>      </p>
-                    <a href="#">Learn more</a>
+                    <a href="https://docs.google.com/presentation/d/1WticgKZVGPWozMpq7z_q1tKkiXk5zSfs/edit#slide=id.p1">Learn more</a>
                 </div>
             </div>
         </div> 
@@ -119,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="#" class="btn1">See more</a>
         </div>
     </div>
 
@@ -136,9 +134,21 @@
                         <a href="www.linkedin.com/in/kiel-vincent-alpapara"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://instagram.com/super_kielll/"><i class="fa-brands fa-instagram"></i></a>
                     </div>
+                    <a href="#" download="Download CV" class="btn2">Download CV</a>
+                </div>
+                <div class="contact right">
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <h3>Get In Touch</h3>
+                        <input type="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="4" placeholder="How can i help you?"></textarea>
+                        <button type="button" onclick="sendEmail()" class="btn btn3"> Submit</button>
+
+                    </form>
+
                 </div>
              </div>
-            </div>
+         </div>
         </div>
     </div>
 
@@ -167,5 +177,29 @@
             sidemeu.style.right = "-200px";
         }
     </script>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("kielvincentalpapara003@gmail.com"); 
+            })();
+        </script>    
+        <script>
+            function sendEmail() {
+                emailjs.send("service_wk26loc", "template_k92c8nv", {
+                    from_email: document.getElementById("email").value,
+                    message: document.getElementById("message").value,
+                })
+                .then(
+                    function(response) {
+                        alert("Message sent successfully!");
+                    },
+                    function(error) {
+                        alert("Failed to send message. Please try again later.");
+                    }
+                );
+            }
+        </script>
+        
 </body>
 </html>
